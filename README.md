@@ -20,15 +20,42 @@
 ## Types
 
 - **Functional:**
-
     ```py
     import threading
+
+    def fn_agent_first(param):
+        return None
+
     t1 = threading.Thread(name="thread1", target=fn_agent_first, args=("agent_first",))
+
     ```
 
 - **OOP:**
+    ```py
+    import threading
+    import time
+    import datetime
+    class thread_1(threading.Thread):
+        def __init__(self, name_thread, id ,data):
+            self.name_thread = name_thread
+            self.id = id
+            self.data = data
+            threading.Thread.__init__(self, name=self.name_thread, target=thread_1.run)
+    
+        def run(self):
+            self.method_1(self.id)
 
+        def method_1(self, id):
+            local_in = datetime.datetime.now()
+            print("INN >>>>>> agent_1")
+            time.sleep(5)
+            print("END >>>>>> agent_1 " + str(datetime.datetime.now().second - local_in.second))
+            return None
+    
+t1 = thread_1("first thread", 12, "data")s
 
+     
+    ```
 
 ## Run & Configure
 -  python thread_as_fn.py
