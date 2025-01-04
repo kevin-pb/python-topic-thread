@@ -51,10 +51,8 @@
             time.sleep(5)
             print("END >>>>>> agent_1 " + str(datetime.datetime.now().second - local_in.second))
             return None
-    
-t1 = thread_1("first thread", 12, "data")s
-
-     
+            
+    t1 = thread_1("first thread", 12, "data")
     ```
 
 ## Run & Configure
