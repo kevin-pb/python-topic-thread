@@ -1,5 +1,7 @@
 # Topic Thread
 
+Threads are very useful for improving the performance and speed of applications because they allow parallel processing.
+
 ## Application Development Strategies
 
 - Synchronous: A synchronous process is one that runs sequentially, waiting for each operation to finish before starting the next. That is, if you had two tasks in your program, “process 1” and “process 2.” Process 2 would wait for process 1 to finish, and then start immediately.
@@ -20,6 +22,7 @@
 ## Types
 
 - **Functional:**
+Create a thread
     ```py
     import threading
 
@@ -31,6 +34,7 @@
     ```
 
 - **OOP:**
+Create a thread
     ```py
     import threading
     import time
